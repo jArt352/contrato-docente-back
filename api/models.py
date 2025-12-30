@@ -239,7 +239,7 @@ class User(AbstractUser):
     # Grupo asignado (solo uno por usuario)
     # ADJUDICATOR, ADMIN, EVALUATOR, NEXUS, TEACHER
     role = models.ForeignKey(
-        Group,
+        'Group',
         on_delete=models.PROTECT,
         related_name='users',
         null=True,
