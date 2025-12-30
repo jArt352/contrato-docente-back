@@ -273,7 +273,7 @@ class TeacherProfile(models.Model):
     Un docente tiene asignado UNA modalidad, UN nivel y UN área curricular.
     """
     user = models.OneToOneField(
-        User,
+        'User',
         on_delete=models.CASCADE,
         related_name='teacher_profile',
         primary_key=True
@@ -315,7 +315,7 @@ class EvaluatorProfile(models.Model):
     Un evaluador puede tener asignadas VARIAS modalidades, niveles y áreas curriculares.
     """
     user = models.OneToOneField(
-        User,
+        'User',
         on_delete=models.CASCADE,
         related_name='evaluator_profile',
         primary_key=True
